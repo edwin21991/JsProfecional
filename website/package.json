@@ -1,23 +1,17 @@
 {
-  "name": "platzi-media-player",
+  "name": "website",
   "version": "1.0.0",
-  "description": "Proyecto del Curso Profesional de JavaScript de la Escuela de JavaScript de Platzi.",
-  "license": "MIT",
-  "author": "Richard B. Kaufman López <richardbkaufman@gmail.com>",
-  "keywords": [
-    "platzi"
-  ],
+  "description": "",
+  "main": "sw.js",
   "scripts": {
-    "start": "parcel index.html ejercicios/index.html ejercicios/**/*.html"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
   },
+  "keywords": [],
+  "author": "Edwin Sanchez <edwin.s.g@hotmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "typescript": "^3.5.3"
-  },
-  "browserslist": [
-    "last 1 Chrome version"
-  ],
-  "dependencies": {
-    "@sparragus/platzimediaplayer": "^1.0.0"
+    "live-server": "^1.2.1"
   }
 }
+
