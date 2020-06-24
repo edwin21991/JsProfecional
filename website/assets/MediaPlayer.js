@@ -5,8 +5,26 @@ function MediaPlayer(config){
 }
 
 MediaPlayer.prototype._initPlugins = function(){
+  const player= {
+    play: () => this.play(),
+    pause: () => this.pause(),
+    media: this.media,
+    get muted(){
+      return this.media.muted
+    },
+    set muted(value){
+
+      this.media.muted = value
+      // if (this.media.muted == true) {
+      //   this.media.muted = true
+      // } else {
+      //   this.media.muted = false
+      // }
+    }
+  }
+ 
   this.plugins.forEach(plugin =>{
-    plugin.run(this)
+    plugin.run(player)
   })
 }
 
@@ -36,10 +54,8 @@ MediaPlayer.prototype.unmute = function(){
 
 MediaPlayer.prototype.toggleMute = function(){
   if (this.media.muted == false){
-    alert("hola 1")
     this.media.muted = true
   }else{
-    alert("hola 2")
     this.media.muted = false
   }
 }
